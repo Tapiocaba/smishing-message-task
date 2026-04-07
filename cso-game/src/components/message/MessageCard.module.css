@@ -1,0 +1,88 @@
+/* === SMS Card wrapper (shadow/radius handled by conversationFrame) === */
+.smsCard {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* === Contact header (white background) === */
+.contactHeader {
+  background: #ffffff;
+  padding: 14px 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #c7c7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatarIcon {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.contactNameRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.displayName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1c1e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+.phoneNumber {
+  font-size: 12px;
+  color: #8e8e93;
+  margin-top: 1px;
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Mono', monospace;
+  letter-spacing: 0.01em;
+}
+
+
+/* === Chat area (iOS gray background) === */
+.chatArea {
+  background: #f2f2f7;
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* === Received message bubble === */
+.bubble {
+  background: #e5e5ea;
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  padding: 10px 14px;
+  max-width: 88%;
+  align-self: flex-start;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1c1c1e;
+  font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  word-break: break-word;
+  white-space: pre-wrap;
+}

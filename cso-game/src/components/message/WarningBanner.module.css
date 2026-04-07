@@ -1,0 +1,44 @@
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 8px;
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.normal {
+  background: #fff3cd;
+  border-color: #f5a623;
+  color: #7d4e00;
+}
+
+.escalated {
+  background: #fff0e6;
+  border-color: #ea580c;
+  color: #9a3412;
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text {
+  flex: 1;
+}
+
+.escalatedPrefix {
+  font-weight: 700;
+  margin-right: 4px;
+}

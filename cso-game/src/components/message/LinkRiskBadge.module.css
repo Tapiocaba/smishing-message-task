@@ -1,0 +1,57 @@
+.body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111111;
+  word-break: break-word;
+}
+
+.urlShortened {
+  color: #b45309;
+  text-decoration: underline;
+  text-decoration-color: #f5a623;
+  text-underline-offset: 3px;
+  cursor: help;
+  position: relative;
+}
+
+.urlSuspicious {
+  color: #c2410c;
+  text-decoration: underline;
+  text-decoration-color: #ea580c;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.urlDangerous {
+  color: #dc2626;
+  text-decoration: underline;
+  text-decoration-color: #dc2626;
+  text-decoration-style: wavy;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.inlineLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.labelSuspicious {
+  background: rgba(234, 88, 12, 0.12);
+  color: #c2410c;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+.labelDangerous {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
