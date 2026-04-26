@@ -1,0 +1,58 @@
+/* iPhone 16 logical dimensions: 393 × 852 px */
+
+.outerFrame {
+  width: 393px;
+  height: 852px;
+  border-radius: 55px;
+  background: #1a1a1a;
+  box-shadow:
+    inset 0 0 0 1px #3a3a3a,
+    0 30px 80px rgba(0,0,0,0.7),
+    0 0 0 1px #111;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.screen {
+  position: absolute;
+  inset: 10px;
+  border-radius: 46px;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Side button — sits in the right bezel, mimics iPhone sleep/wake button */
+.sideBtn {
+  position: absolute;
+  right: 0;
+  top: 190px;
+  width: 4px;
+  height: 68px;
+  background: #2c2c2e;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  border-left: 1px solid #1a1a1a;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.12s ease;
+}
+
+.sideBtn:hover {
+  background: #3a3a3c;
+}
+
+.sideBtn:active {
+  background: #48484a;
+}
+
+/* In-app notification banner overlay — floats above active screens */
+.inAppBannerWrap {
+  position: absolute;
+  top: 55px;
+  left: 12px;
+  right: 12px;
+  z-index: 100;
+  pointer-events: auto;
+}

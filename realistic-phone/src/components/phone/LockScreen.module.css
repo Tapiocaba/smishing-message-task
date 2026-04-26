@@ -1,0 +1,197 @@
+/* ── Container: always black base ──────────────────────────────────────── */
+.lockScreen {
+  flex: 1;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* ── Wallpaper gradient layer ─────────────────────────────────────────── */
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #1a1a2e 0%, #16213e 45%, #0f3460 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Content layer ────────────────────────────────────────────────────── */
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  /* z-index 15 puts content above the DynamicIsland (z-index 10) so
+     elements inside are not hidden behind the pill camera cutout. */
+  z-index: 15;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Clock — shown first, above any banners ───────────────────────────── */
+.clockArea {
+  /* Push below the Dynamic Island (37px) + a comfortable gap */
+  margin-top: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.time {
+  font-size: 62px;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+
+/* ── Notification banner stack — flows below the clock ─────────────────── */
+.notifContainer {
+  width: calc(100% - 24px);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Fake notification banner ─────────────────────────────────────────── */
+.fakeBanner {
+  width: 100%;
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: bannerSlideIn 0.4s cubic-bezier(0.34, 1.08, 0.64, 1) both;
+}
+
+@keyframes bannerSlideIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.fakeIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #636366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fakeIconLetter {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.fakeBannerContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.fakeBannerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.fakeBannerApp {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e6e73;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.fakeBannerTime {
+  font-size: 11px;
+  color: #8e8e93;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.fakeBannerPreview {
+  font-size: 13px;
+  color: #3c3c43;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Status messages ──────────────────────────────────────────────────── */
+.noNotifs {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.swipeHint {
+  position: absolute;
+  bottom: 28px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ── Messages shortcut button ─────────────────────────────────────────── */
+.messagesBtn {
+  position: absolute;
+  bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 14px;
+  transition: background 0.15s ease;
+}
+
+.messagesBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.messagesBtn:active {
+  background: rgba(255,255,255,0.18);
+}
+
+.messagesBtnLabel {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  letter-spacing: 0.02em;
+}

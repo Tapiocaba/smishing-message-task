@@ -1,0 +1,111 @@
+.homeScreen {
+  flex: 1;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* Same wallpaper style as lock screen for visual continuity */
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #1a1a2e 0%, #16213e 45%, #0f3460 100%);
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 24px;
+  /* push content below Dynamic Island */
+  padding-top: 64px;
+}
+
+/* ── App grid ─────────────────────────────────────────────────────────── */
+.appGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.appIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  background: #ff3b30;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.appLabel {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  white-space: nowrap;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────── */
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 40px;
+}
+
+.emptyIcon {
+  margin-bottom: 4px;
+}
+
+.emptyText {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  margin: 0;
+}
+
+.emptySubtext {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}

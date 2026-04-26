@@ -1,0 +1,12 @@
+.island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000000;
+  border-radius: 999px;
+  z-index: 10;
+  pointer-events: none;
+}

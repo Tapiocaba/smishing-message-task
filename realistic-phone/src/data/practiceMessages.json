@@ -1,0 +1,68 @@
+[
+  {
+    "id": "practice_real_01",
+    "type": "real",
+    "isPhishing": false,
+    "category": "appointment",
+    "urlRisk": "safe",
+    "sender": {
+      "displayName": "CVS Pharmacy",
+      "phoneNumber": "22796",
+      "senderFormat": "shortCode",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "3 months ago",
+      "messageCount": 3
+    },
+    "body": "CVS Pharmacy: Your prescription is ready for pickup at your local CVS. Store hours: Mon-Fri 8am-9pm. Reply STOP to opt out.",
+    "threadPreamble": [],
+    "warningReason": null,
+    "officialURL": "https://www.cvs.com",
+    "hasImpersonationPattern": false,
+    "blockAssignment": "both"
+  },
+  {
+    "id": "practice_phish_01",
+    "type": "fake",
+    "isPhishing": true,
+    "category": "packageDelivery",
+    "urlRisk": "suspicious",
+    "sender": {
+      "displayName": "USPS Delivery",
+      "phoneNumber": "+1 (332) 205-9871",
+      "senderFormat": "fullPhone",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "never",
+      "messageCount": 0
+    },
+    "body": "USPS: Your package could not be delivered due to an incomplete address. Update your address within 24hrs to avoid return: usps-delivery-update.com/reroute?id=PKG8821",
+    "threadPreamble": [],
+    "warningReason": "usps-delivery-update.com is not the official USPS domain (usps.com). Real USPS tracking uses informed delivery at usps.com.",
+    "officialURL": "https://www.usps.com",
+    "hasImpersonationPattern": true,
+    "blockAssignment": "both"
+  },
+  {
+    "id": "practice_real_02",
+    "type": "real",
+    "isPhishing": false,
+    "category": "businessPromotion",
+    "urlRisk": "safe",
+    "sender": {
+      "displayName": "Uber",
+      "phoneNumber": "33285",
+      "senderFormat": "shortCode",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "1 month ago",
+      "messageCount": 6
+    },
+    "body": "Uber: Your ride with Javier is on its way. 3 min away. Toyota Camry, License XWK-4821. Track at uber.com/track",
+    "threadPreamble": [],
+    "warningReason": null,
+    "officialURL": "https://www.uber.com",
+    "hasImpersonationPattern": false,
+    "blockAssignment": "both"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tmobile_autopay_01",
+    "type": "real",
+    "isPhishing": false,
+    "category": "businessPromotion",
+    "urlRisk": "safe",
+    "sender": {
+      "displayName": "T-Mobile",
+      "phoneNumber": "456",
+      "senderFormat": "shortCode",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "several months ago",
+      "messageCount": 8
+    },
+    "body": "T-Mobile: Your monthly AutoPay of $112 was processed on 03/02/2026 using CARD ending in 2324. Your balance due is now $0. Review your bill: https://secure.t-mobile.com/AccountActivity001",
+    "threadPreamble": [],
+    "warningReason": null,
+    "officialURL": "https://www.t-mobile.com",
+    "hasImpersonationPattern": false,
+    "blockAssignment": 1
+  },
+  {
+    "id": "discover_statement_01",
+    "type": "real",
+    "isPhishing": false,
+    "category": "financialDeception",
+    "urlRisk": "safe",
+    "sender": {
+      "displayName": "Discover Card",
+      "phoneNumber": "347268",
+      "senderFormat": "shortCode",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "2 months ago",
+      "messageCount": 4
+    },
+    "body": "Discover Card Alert: Your credit card statement is ready at https://app.discover.com/STMTAVL Text STOP to end",
+    "threadPreamble": [],
+    "warningReason": null,
+    "officialURL": "https://www.discover.com",
+    "hasImpersonationPattern": false,
+    "blockAssignment": 1
+  },
+  {
+    "id": "amazon_recall_phish_01",
+    "type": "fake",
+    "isPhishing": true,
+    "category": "impersonation",
+    "urlRisk": "dangerous",
+    "sender": {
+      "displayName": "Amazon Official Recall",
+      "phoneNumber": "+44 7413 416380",
+      "senderFormat": "fullPhone",
+      "countryCode": "GB",
+      "countryFlag": "🇬🇧",
+      "firstContactLabel": "never",
+      "messageCount": 0
+    },
+    "body": "[Amazon] Official Recall Notification – Resolution for Your Recent Order\n\nDear Customer,\n\nWe appreciate your continued trust in Amazon. Following our latest quality review (Inspection Receipt No. 202603021), we regret to advise you that an item from your February 2026 order has been recalled due to a potential safety risk.\n\nTo resolve this matter, we will issue a full refund to you. No return of the item is required.\n\nYou may review the complete recall details and confirm your refund via the secure link below:\n\nhttps://t.co/8ATawTYj29?XZM=LptIE\n\nSincerely,\nAmazon Customer Service",
+    "threadPreamble": [],
+    "warningReason": "t.co/8ATawTYj29 is a shortened link — Amazon never sends refund links via shortened URLs. Real Amazon alerts go through amazon.com/a/c/ links.",
+    "officialURL": "https://www.amazon.com",
+    "hasImpersonationPattern": true,
+    "blockAssignment": 2
+  },
+  {
+    "id": "texas_dmv_phish_01",
+    "type": "fake",
+    "isPhishing": true,
+    "category": "impersonation",
+    "urlRisk": "dangerous",
+    "sender": {
+      "displayName": "Texas Vehicle Compliance",
+      "phoneNumber": "+63 962 282 7353",
+      "senderFormat": "fullPhone",
+      "countryCode": "PH",
+      "countryFlag": "🇵🇭",
+      "firstContactLabel": "never",
+      "messageCount": 0
+    },
+    "body": "Texas Vehicle Compliance | Final Notice of Delinquent Traffic Fine\n\nAn unpaid traffic fine is currently affecting your Texas vehicle record.\n\nPayment Deadline: April 6, 2026 | Mandatory Penalty Action: April 7, 2026\n\nCase Number: TX-2026-4521\n\nPay: sectxdmv.gov-zkkmuu.top/pay\n\nConsequences of non-payment:\n- Inability to renew vehicle registration\n- Permanent documentation on your driving record\n- 30-day license suspension with a $160 late fee\n\nReply with \"A\" to activate the payment link.",
+    "threadPreamble": [
+      "Texas Vehicle Compliance: Reminder — unpaid traffic fine on record. Reply STOP to opt out."
+    ],
+    "warningReason": "sectxdmv.gov-zkkmuu.top is not a .gov domain. Real Texas DMV uses TxDMV.gov. The Philippine phone number (+63) is a strong indicator of a scam.",
+    "officialURL": "https://www.txdmv.gov",
+    "hasImpersonationPattern": true,
+    "blockAssignment": 2
+  },
+  {
+    "id": "dallas_elections_phish_01",
+    "type": "fake",
+    "isPhishing": true,
+    "category": "political",
+    "urlRisk": "suspicious",
+    "sender": {
+      "displayName": "Dallas County Elections",
+      "phoneNumber": "+1 (713) 565-1628",
+      "senderFormat": "fullPhone",
+      "countryCode": "US",
+      "countryFlag": "🇺🇸",
+      "firstContactLabel": "never",
+      "messageCount": 0
+    },
+    "body": "From Dallas County Elections Dept: On Primary Election Day, Mar. 3rd, you can only vote at your designated polling place. Early voters (Feb. 17-27) can go to any Dallas County Voting Center. Find your location: https://my-vote.org/Dallas?id=2TM9\nEspañol, responde \"E\"\nCho tieng Viet, viet \"V\"\nStop to End",
+    "threadPreamble": [],
+    "warningReason": "my-vote.org/Dallas is not the official Dallas County elections website (dallascountyvotes.org). The full phone number (+1 713…) is atypical for official government SMS.",
+    "officialURL": "https://www.dallascountyvotes.org",
+    "hasImpersonationPattern": false,
+    "blockAssignment": 1
+  }
+]

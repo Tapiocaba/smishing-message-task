@@ -1,0 +1,121 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: var(--space-6);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.heroIcon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.heroTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.heroSubtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+}
+
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.buttonItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.btnChip {
+  min-width: 70px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chipIgnore { background: var(--bg-elevated); color: var(--text-primary); border: 1px solid var(--border); }
+.chipOpen   { background: var(--accent-blue); color: #ffffff; }
+.chipVerify { background: var(--accent-amber); color: #1c1000; }
+.chipReport { background: var(--accent-red); color: #ffffff; }
+
+.btnDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.note {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  line-height: 1.6;
+}
+
+.note strong {
+  color: var(--text-primary);
+}
+
+.ctaBtn {
+  background: var(--accent-blue);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  align-self: stretch;
+}
+
+.ctaBtn:hover {
+  background: var(--accent-blue-hover);
+  transform: translateY(-1px);
+}

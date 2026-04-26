@@ -1,0 +1,226 @@
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f7;
+  overflow: hidden;
+}
+
+.navBar {
+  height: 52px;
+  background: #f2f2f7;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 16px 10px;
+  flex-shrink: 0;
+}
+
+.navTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1c1c1e;
+  font-family: -apple-system, 'SF Pro Display', sans-serif;
+}
+
+.navIcon {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  margin: 0 16px 10px;
+  background: rgba(142,142,147,0.12);
+  border-radius: 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.searchPlaceholder {
+  font-size: 14px;
+  color: #8e8e93;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 12px 12px 0 0;
+}
+
+.list::-webkit-scrollbar { display: none; }
+
+/* ── Conversation rows ── */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 0.5px solid #c6c6c8;
+  position: relative;
+}
+
+.row:active { background: #f2f2f7; }
+
+.rowFake {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.unreadDot {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #007aff;
+}
+
+.avatarCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #c7c7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarInitial {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.rowContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.rowName {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1c1c1e;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowNameUnread {
+  font-weight: 600;
+}
+
+.rowTime {
+  font-size: 12px;
+  color: #8e8e93;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.rowBottom {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rowPreview {
+  flex: 1;
+  font-size: 13px;
+  color: #8e8e93;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowPreviewUnread {
+  color: #3c3c43;
+}
+
+.chevron { flex-shrink: 0; }
+
+/* ── Recently Deleted section ── */
+.deletedSection {
+  border-top: 8px solid #f2f2f7;
+}
+
+.deletedRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.deletedRowEmpty {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.deletedLabel {
+  font-size: 15px;
+  color: #1c1c1e;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.deletedRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deletedCount {
+  font-size: 13px;
+  font-weight: 500;
+  background: #ff3b30;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}
+
+.rowCategoryChip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  color: #3c3c43;
+  background: rgba(142, 142, 147, 0.15);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-bottom: 2px;
+  font-family: -apple-system, 'SF Pro Text', sans-serif;
+}

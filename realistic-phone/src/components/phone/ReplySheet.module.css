@@ -1,0 +1,85 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 50;
+  animation: overlayIn 0.2s ease both;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.sheet {
+  padding: 8px 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: sheetIn 0.35s cubic-bezier(0.34, 1.08, 0.64, 1) both;
+}
+
+@keyframes sheetIn {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.mainCard {
+  background: rgba(255,255,255,0.97);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.divider {
+  height: 0.5px;
+  background: #c6c6c8;
+  margin: 0 16px;
+}
+
+.btn {
+  width: 100%;
+  height: 56px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  transition: background 100ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:active { background: rgba(0,0,0,0.08); }
+
+.btnNotSpam {
+  color: #34c759;
+  font-weight: 500;
+}
+
+.btnReport {
+  color: #ff3b30;
+  font-weight: 500;
+}
+
+.cancelCard {
+  background: rgba(255,255,255,0.97);
+  border-radius: 14px;
+  color: #007aff;
+  font-weight: 600;
+}
+
+.btnConsolidatedReport {
+  color: #ff3b30;
+  font-weight: 700;
+  font-size: 16px;
+  background: rgba(255, 59, 48, 0.05);
+}
+
+.btnConsolidatedSafe {
+  color: #34c759;
+  font-weight: 500;
+}
